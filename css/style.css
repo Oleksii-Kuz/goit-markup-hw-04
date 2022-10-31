@@ -205,6 +205,9 @@ body {
 
 .promo {
 	padding: 200px 0;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/promo-bj.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -334,6 +337,11 @@ body {
 .social-link {
 	width: 44px;
 	height: 44px;
+}
+
+.social-link a {
+	width: 100%;
+	height: 100%;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -341,7 +349,8 @@ body {
 	transition: 0.2s linear;
 }
 
-.social-link:hover {
+.social-link a:hover,
+.social-link a:focus {
 	background-color: var(--interactiveColor);
 }
 
@@ -350,7 +359,8 @@ body {
 	transition: 0.2s linear;
 }
 
-.social-link:hover .social-icon {
+.social-link a:hover .social-icon,
+.social-link a:focus .social-icon {
 	fill: var(--colorWhite);
 }
 
@@ -414,15 +424,21 @@ body {
 	max-width: 370px;
 	background-color: var(--colorWhite);
 	transition: 0.2s linear;
-}
-
-.projects-item:hover {
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+	position: relative;
 }
 
 .projects-item__wrapper {
 	padding: 20px 24px;
 	border: 1px solid #EEEEEE;
+}
+
+.projects-item__poster {
+	display: block;
+}
+
+.projects-item__poster:hover,
+.projects-item__poster:focus {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-item__title {
@@ -431,6 +447,7 @@ body {
 	line-height: 2;
 	margin-bottom: 4px;
 	letter-spacing: 0.06em;
+	color: var(--mainTextColor)
 }
 
 .projects-item__category {
@@ -453,7 +470,6 @@ body {
 .partners-item {
 	width: 170px;
 	height: 92px;
-	border: 1px solid #AFB1B8;
 	border-radius: 4px;
 	transition: 0.2s linear;
 }
@@ -464,9 +480,11 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: 1px solid #AFB1B8;
 }
 
-.partners-item:hover {
+.partners-item a:hover,
+.partners-item a:focus {
 	border-color: var(--interactiveColor);
 }
 
@@ -475,7 +493,8 @@ body {
 	transition: 0.2s linear;
 }
 
-.partners-item:hover .client-icon {
+.partners-item a:hover .client-icon,
+.partners-item a:focus .client-icon {
 	fill: var(--interactiveColor);
 }
 
@@ -486,11 +505,11 @@ body {
 
 .footer .container {
 	display: flex;
+	align-items: baseline;
 }
 
 .footer__links {
 	margin-left: 70px;
-	padding-top: 15px;
 }
 
 .footer__logo {
@@ -538,10 +557,14 @@ body {
 }
 
 .footer__social .social-link {
+	border-radius: 50%;
+}
+
+.footer__social .social-link {
 	background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer__social .social-link:hover {
+.footer__social .social-link a:hover {
 	background-color: var(--interactiveColor);
 }
 
