@@ -162,6 +162,10 @@ body {
 	color: var(--mainTextColor);
 }
 
+.navigation__item.current {
+	color: var(--interactiveColor);
+}
+
 .navigation__item:not(:last-child) {
 	margin-right: 50px;
 }
@@ -324,7 +328,7 @@ body {
 }
 
 .team-item__wrapper {
-	padding: 20px 0;
+	padding: 30px 0;
 }
 
 .team-item__links {
@@ -481,6 +485,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	border: 1px solid #AFB1B8;
+	border-radius: 4px;
 }
 
 .partners-item a:hover,
